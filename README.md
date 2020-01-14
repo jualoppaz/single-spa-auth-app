@@ -1,24 +1,3 @@
-# demo
+# single-spa-login
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This is a Vue application example used as NPM package in [single-spa-login-example-with-npm-modules](https://github.com/jualoppaz/single-spa-login-example-with-npm-modules) in order to register an application. See the installation instructions there.
