@@ -14368,85 +14368,10 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/systemjs-webpack-interop/src/public-path-system-resolve.js
-function public_path_system_resolve_setPublicPath(systemjsModuleName, rootDirectoryLevel) {
-  if (!rootDirectoryLevel) {
-    rootDirectoryLevel = 1;
-  }
-  if (
-    typeof systemjsModuleName !== "string" ||
-    systemjsModuleName.trim().length === 0
-  ) {
-    throw Error(
-      "systemjs-webpack-interop: setPublicPath(systemjsModuleName) must be called with a non-empty string 'systemjsModuleName'"
-    );
-  }
-
-  if (
-    typeof rootDirectoryLevel !== "number" ||
-    rootDirectoryLevel <= 0 ||
-    !Number.isInteger(rootDirectoryLevel)
-  ) {
-    throw Error(
-      "systemjs-webpack-interop: setPublicPath(systemjsModuleName, rootDirectoryLevel) must be called with a positive integer 'rootDirectoryLevel'"
-    );
-  }
-
-  let moduleUrl;
-  try {
-    moduleUrl = window.System.resolve(systemjsModuleName);
-    if (!moduleUrl) {
-      throw Error();
-    }
-  } catch (err) {
-    throw Error(
-      "systemjs-webpack-interop: There is no such module '" +
-        systemjsModuleName +
-        "' in the SystemJS registry. Did you misspell the name of your module?"
-    );
-  }
-
-  __webpack_require__.p = resolveDirectory(moduleUrl, rootDirectoryLevel);
-}
-
-function resolveDirectory(urlString, rootDirectoryLevel) {
-  const url = new URL(urlString);
-  const pathname = new URL(urlString).pathname;
-  let numDirsProcessed = 0,
-    index = pathname.length;
-  while (numDirsProcessed !== rootDirectoryLevel && index >= 0) {
-    const char = pathname[--index];
-    if (char === "/") {
-      numDirsProcessed++;
-    }
-  }
-
-  if (numDirsProcessed !== rootDirectoryLevel) {
-    throw Error(
-      "systemjs-webpack-interop: rootDirectoryLevel (" +
-        rootDirectoryLevel +
-        ") is greater than the number of directories (" +
-        numDirsProcessed +
-        ") in the URL path " +
-        fullUrl
-    );
-  }
-
-  url.pathname = url.pathname.slice(0, index + 1);
-
-  return url.href;
-}
-
-// CONCATENATED MODULE: ./node_modules/systemjs-webpack-interop/src/systemjs-webpack-interop.js
-
-
-// CONCATENATED MODULE: ./src/set-public-path.js
-
-public_path_system_resolve_setPublicPath('single-spa-login-app');
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.runtime.esm.js
 var vue_runtime_esm = __webpack_require__("2b0e");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"446279a5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=67641d4e&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"25a8bdf2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=67641d4e&
 var Appvue_type_template_id_67641d4e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"login-app"}},[_c('router-view')],1)}
 var staticRenderFns = []
 
@@ -43569,7 +43494,6 @@ const __vue_script__$3 = VueToastr;
 /* harmony default export */ var vue_toastr_esm = (VueToastr$1);
 
 // CONCATENATED MODULE: ./src/singleSpaEntry.js
-
 
 
 
