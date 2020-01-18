@@ -80,66 +80,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 		return module.exports;
 /******/ 	}
 /******/
-/******/ 	// This file contains only the entry chunk.
 /******/ 	// The chunk loading function for additional chunks
-/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
-/******/ 		var promises = [];
-/******/
-/******/
-/******/ 		// JSONP chunk loading for javascript
-/******/
-/******/ 		var installedChunkData = installedChunks[chunkId];
-/******/ 		if(installedChunkData !== 0) { // 0 means "already installed".
-/******/
-/******/ 			// a Promise means "currently loading".
-/******/ 			if(installedChunkData) {
-/******/ 				promises.push(installedChunkData[2]);
-/******/ 			} else {
-/******/ 				// setup Promise in chunk cache
-/******/ 				var promise = new Promise(function(resolve, reject) {
-/******/ 					installedChunkData = installedChunks[chunkId] = [resolve, reject];
-/******/ 				});
-/******/ 				promises.push(installedChunkData[2] = promise);
-/******/
-/******/ 				// start chunk loading
-/******/ 				var script = document.createElement('script');
-/******/ 				var onScriptComplete;
-/******/
-/******/ 				script.charset = 'utf-8';
-/******/ 				script.timeout = 120;
-/******/ 				if (__webpack_require__.nc) {
-/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
-/******/ 				}
-/******/ 				script.src = jsonpScriptSrc(chunkId);
-/******/
-/******/ 				// create error before stack unwound to get useful stacktrace later
-/******/ 				var error = new Error();
-/******/ 				onScriptComplete = function (event) {
-/******/ 					// avoid mem leaks in IE.
-/******/ 					script.onerror = script.onload = null;
-/******/ 					clearTimeout(timeout);
-/******/ 					var chunk = installedChunks[chunkId];
-/******/ 					if(chunk !== 0) {
-/******/ 						if(chunk) {
-/******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-/******/ 							var realSrc = event && event.target && event.target.src;
-/******/ 							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
-/******/ 							error.name = 'ChunkLoadError';
-/******/ 							error.type = errorType;
-/******/ 							error.request = realSrc;
-/******/ 							chunk[1](error);
-/******/ 						}
-/******/ 						installedChunks[chunkId] = undefined;
-/******/ 					}
-/******/ 				};
-/******/ 				var timeout = setTimeout(function(){
-/******/ 					onScriptComplete({ type: 'timeout', target: script });
-/******/ 				}, 120000);
-/******/ 				script.onerror = script.onload = onScriptComplete;
-/******/ 				document.head.appendChild(script);
-/******/ 			}
-/******/ 		}
-/******/ 		return Promise.all(promises);
+/******/ 	// Since all referenced chunks are already included
+/******/ 	// in this file, this function is empty here.
+/******/ 	__webpack_require__.e = function requireEnsure() {
+/******/ 		return Promise.resolve();
 /******/ 	};
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
@@ -10382,6 +10327,103 @@ exports.f = DESCRIPTORS ? nativeDefineProperty : function defineProperty(O, P, A
 
 /***/ }),
 
+/***/ "a55b":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4fa1730e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Login.vue?vue&type=template&id=d20f3678&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"auth-page"},[_c('div',{staticClass:"container page"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6 offset-md-3 col-xs-12"},[_c('h1',{staticClass:"text-xs-center"},[_vm._v("Sign in")]),_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.onSubmit(_vm.user, _vm.password)}}},[_c('fieldset',{staticClass:"form-group"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.user),expression:"user"}],staticClass:"form-control form-control-lg",attrs:{"type":"text","placeholder":"User"},domProps:{"value":(_vm.user)},on:{"input":function($event){if($event.target.composing){ return; }_vm.user=$event.target.value}}})]),_c('fieldset',{staticClass:"form-group"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.password),expression:"password"}],staticClass:"form-control form-control-lg",attrs:{"type":"password","placeholder":"Password"},domProps:{"value":(_vm.password)},on:{"input":function($event){if($event.target.composing){ return; }_vm.password=$event.target.value}}})]),_c('button',{staticClass:"btn btn-lg btn-primary pull-xs-right"},[_vm._v(" Sign in ")])])])])])])}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/views/Login.vue?vue&type=template&id=d20f3678&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Login.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var Loginvue_type_script_lang_js_ = ({
+  name: "loginView",
+  data: function data() {
+    return {
+      user: null,
+      password: null
+    };
+  },
+  methods: {
+    onSubmit: function onSubmit(user, password) {
+      if (user === "admin" && password === "12345") {
+        sessionStorage.setItem("user", JSON.stringify({
+          username: user
+        }));
+        sessionStorage.setItem("token", "your auth token here");
+        window.history.pushState(null, null, "/");
+      } else {
+        this.$toastr.e("Invalid credentials");
+      }
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/views/Login.vue?vue&type=script&lang=js&
+ /* harmony default export */ var views_Loginvue_type_script_lang_js_ = (Loginvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__("2877");
+
+// CONCATENATED MODULE: ./src/views/Login.vue
+
+
+
+
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  views_Loginvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Login = __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
 /***/ "a691":
 /***/ (function(module, exports) {
 
@@ -14371,7 +14413,7 @@ if (typeof window !== 'undefined') {
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.runtime.esm.js
 var vue_runtime_esm = __webpack_require__("2b0e");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"25a8bdf2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=67641d4e&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4fa1730e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=67641d4e&
 var Appvue_type_template_id_67641d4e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"login-app"}},[_c('router-view')],1)}
 var staticRenderFns = []
 
@@ -17229,10 +17271,12 @@ if (inBrowser && window.Vue) {
 
 vue_runtime_esm["default"].use(vue_router_esm);
 /* harmony default export */ var router = (new vue_router_esm({
+  mode: "history",
+  base: "/login",
   routes: [{
     path: "/",
     component: function component() {
-      return __webpack_require__.e(/* import() */ 1).then(__webpack_require__.bind(null, "a55b"));
+      return Promise.resolve(/* import() */).then(__webpack_require__.bind(null, "a55b"));
     },
     children: []
   }]
@@ -43512,6 +43556,7 @@ vue_runtime_esm["default"].config.productionTip = false;
 var vueLifecycles = single_spa_vue_default()({
   Vue: vue_runtime_esm["default"],
   appOptions: {
+    el: "#login-app",
     render: function render(h) {
       return h(App);
     },
@@ -43569,6 +43614,6 @@ module.exports = global.Promise;
 
 /***/ })
 
-/******/ })["default"];
+/******/ });
 });
 //# sourceMappingURL=single-spa-login-app.umd.js.map
