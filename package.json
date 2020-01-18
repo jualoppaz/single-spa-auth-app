@@ -1,6 +1,6 @@
 {
   "name": "single-spa-login-app",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "main": "dist/single-spa-login-app.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
