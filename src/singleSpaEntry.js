@@ -23,6 +23,7 @@ Vue.config.productionTip = false;
 const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
+    el: "#login-app",
     render: h => h(App),
     router
   }
