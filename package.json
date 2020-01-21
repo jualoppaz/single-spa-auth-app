@@ -1,10 +1,10 @@
 {
-  "name": "single-spa-login-app",
+  "name": "single-spa-auth-app",
   "version": "0.0.1",
-  "main": "dist/single-spa-login-app.umd.js",
+  "main": "dist/single-spa-auth-app.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --inline-vue --formats umd --name single-spa-login-app src/singleSpaEntry.js",
+    "build": "vue-cli-service build --target lib --inline-vue --formats umd --name single-spa-auth-app src/singleSpaEntry.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -48,7 +48,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jualoppaz/single-spa-login-app.git"
+    "url": "https://github.com/jualoppaz/single-spa-auth-app.git"
   },
   "keywords": [
     "single-spa",
@@ -57,7 +57,7 @@
   ],
   "author": "Juan Manuel López Pazos",
   "bugs": {
-    "url": "https://github.com/jualoppaz/single-spa-login-app/issues"
+    "url": "https://github.com/jualoppaz/single-spa-auth-app/issues"
   },
-  "homepage": "https://github.com/jualoppaz/single-spa-login-app#readme"
+  "homepage": "https://github.com/jualoppaz/single-spa-auth-app#readme"
 }

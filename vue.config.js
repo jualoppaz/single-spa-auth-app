@@ -7,9 +7,9 @@ module.exports = {
   },
   configureWebpack: {
     output: {
-      library: "single-spa-login-app",
+      library: "single-spa-auth-app",
       libraryTarget: "umd",
-      filename: "single-spa-login-app.js",
+      filename: "single-spa-auth-app.js",
       path: path.resolve(__dirname, "dist")
     },
     plugins: [
