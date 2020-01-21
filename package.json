@@ -1,6 +1,6 @@
 {
   "name": "single-spa-auth-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/single-spa-auth-app.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
