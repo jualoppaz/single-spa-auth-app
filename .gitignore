@@ -19,3 +19,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+dist/index.html
+dist/favicon.ico
+dist/single-spa-auth-app.js
