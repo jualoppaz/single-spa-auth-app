@@ -1,14 +1,12 @@
 import Vue from 'vue';
+import VueToastr from 'vue-toastr';
+import singleSpaVue from 'single-spa-vue';
+import { BootstrapVue } from 'bootstrap-vue';
 import App from './App.vue';
 import router from './router';
-import singleSpaVue from 'single-spa-vue';
-
-import { BootstrapVue } from 'bootstrap-vue';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
-
-import VueToastr from 'vue-toastr';
 
 Vue.use(BootstrapVue);
 
