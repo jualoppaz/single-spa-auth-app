@@ -21,9 +21,7 @@
                 placeholder="Password"
               />
             </fieldset>
-            <button class="btn btn-lg btn-primary pull-xs-right">
-              Sign in
-            </button>
+            <button class="btn btn-lg btn-primary pull-xs-right">Sign in</button>
           </form>
         </div>
       </div>
@@ -53,3 +51,28 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.auth-page {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        margin-bottom: 30px;
+    }
+
+    form{
+        button{
+            margin-top: 30px;
+        }
+    }
+}
+</style>
