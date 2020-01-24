@@ -1,6 +1,7 @@
 {
   "name": "single-spa-auth-app",
   "version": "0.0.2",
+  "description": "Vue application with login form for be included in a single-spa application as registered app.",
   "main": "dist/single-spa-auth-app.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
