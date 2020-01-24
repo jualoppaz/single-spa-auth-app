@@ -21,9 +21,7 @@
                 placeholder="Password"
               />
             </fieldset>
-            <button class="btn btn-lg btn-primary pull-xs-right">
-              Sign in
-            </button>
+            <button class="btn btn-lg btn-primary pull-xs-right">Sign in</button>
           </form>
         </div>
       </div>
@@ -33,23 +31,48 @@
 
 <script>
 export default {
-  name: "loginView",
+  name: 'loginView',
   data() {
     return {
       user: null,
-      password: null
+      password: null,
     };
   },
   methods: {
     onSubmit(user, password) {
-      if (user === "admin" && password === "12345") {
-        sessionStorage.setItem("user", JSON.stringify({ username: user }));
-        sessionStorage.setItem("token", "your auth token here");
-        window.history.pushState(null, null, "/");
+      if (user === 'admin' && password === '12345') {
+        sessionStorage.setItem('user', JSON.stringify({ username: user }));
+        sessionStorage.setItem('token', 'your auth token here');
+        window.history.pushState(null, null, '/');
       } else {
-        this.$toastr.e("Invalid credentials");
+        this.$toastr.e('Invalid credentials');
       }
-    }
-  }
+    },
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+.auth-page {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        margin-bottom: 30px;
+    }
+
+    form{
+        button{
+            margin-top: 30px;
+        }
+    }
+}
+</style>
