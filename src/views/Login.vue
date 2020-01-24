@@ -31,24 +31,24 @@
 
 <script>
 export default {
-  name: "loginView",
+  name: 'loginView',
   data() {
     return {
       user: null,
-      password: null
+      password: null,
     };
   },
   methods: {
     onSubmit(user, password) {
-      if (user === "admin" && password === "12345") {
-        sessionStorage.setItem("user", JSON.stringify({ username: user }));
-        sessionStorage.setItem("token", "your auth token here");
-        window.history.pushState(null, null, "/");
+      if (user === 'admin' && password === '12345') {
+        sessionStorage.setItem('user', JSON.stringify({ username: user }));
+        sessionStorage.setItem('token', 'your auth token here');
+        window.history.pushState(null, null, '/');
       } else {
-        this.$toastr.e("Invalid credentials");
+        this.$toastr.e('Invalid credentials');
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
