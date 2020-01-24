@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 .auth-page {
-    height: 100%;
+    height: 100vh;
     padding: 0;
     margin: 0;
     display: -webkit-box;
