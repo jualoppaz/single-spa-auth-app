@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": ["plugin:vue/essential", "eslint:recommended", "airbnb-base"],
+  "rules": {},
+  "parserOptions": {
+    "parser": "babel-eslint"
+  }
+}
