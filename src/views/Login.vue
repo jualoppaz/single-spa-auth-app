@@ -25,6 +25,21 @@
           </form>
         </div>
       </div>
+      <div id="copyright-section" class="row">
+        <div class="col-md-6 offset-md-3 col-xs-12">
+          Copyright © 2020
+          <a href="http://www.juanmanuellopezpazos.es" target="_blank"
+            >Juan Manuel López Pazos</a
+          >
+          <a
+            href="https://github.com/jualoppaz/single-spa-login-example-with-npm-packages"
+            target="_blank"
+            id="github-link"
+          >
+            <font-awesome-icon :icon="['fab', 'github']" size="2x" />
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -65,14 +80,28 @@ export default {
     align-items: center;
     justify-content: center;
 
-    h1{
-        margin-bottom: 30px;
-    }
-
-    form{
-        button{
-            margin-top: 30px;
+    .container{
+      .row{
+        h1{
+          margin-bottom: 30px;
         }
+
+        form{
+            button{
+                margin-top: 30px;
+            }
+        }
+
+        &#copyright-section{
+          margin-top: 30px;
+          line-height: 32px;
+          a#github-link{
+            color: #303846;
+            margin-left: 10px;
+            vertical-align: middle;
+          }
+        }
+      }
     }
 }
 </style>
