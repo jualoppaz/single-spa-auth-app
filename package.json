@@ -1,26 +1,17 @@
 {
   "name": "single-spa-auth-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue application with login form for be included in a single-spa application as registered app.",
   "main": "dist/single-spa-auth-app.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --inline-vue --formats umd --name single-spa-auth-app src/singleSpaEntry.js",
+    "build": "vue-cli-service build --target lib --formats umd --name single-spa-auth-app src/singleSpaEntry.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-brands-svg-icons": "^5.12.1",
-    "@fortawesome/vue-fontawesome": "^0.1.9",
-    "bootstrap": "4.4.1",
-    "bootstrap-vue": "2.2.1",
     "core-js": "3.4.4",
     "node-sass": "4.13.1",
-    "sass-loader": "8.0.2",
-    "single-spa-vue": "1.7.0",
-    "vue": "2.6.11",
-    "vue-router": "3.1.4",
-    "vue-toastr": "2.1.2"
+    "sass-loader": "8.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "4.1.0",
