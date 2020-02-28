@@ -5,7 +5,7 @@
   "main": "dist/single-spa-auth-app.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --inline-vue --formats umd --name single-spa-auth-app src/singleSpaEntry.js",
+    "build": "vue-cli-service build --target lib --formats umd --name single-spa-auth-app src/singleSpaEntry.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
