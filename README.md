@@ -69,3 +69,64 @@ export const { unmount } = vueLifecycles;
 
 The **eslint** comments are indicated due to **webpack external** dependencies. Without the **eslint** comments the build process will fail.
 The **vueLifecycles** object contains all **single-spa-vue** methods for the **single-spa** lifecycle of this app. All used config is default one but the custom config of the **el** option. It's assumed that an element with **auth-app** id is defined in the **index.html** where this application will be mounted.
+
+### package.json
+
+```json
+{
+  "name": "single-spa-auth-app",
+  "version": "0.1.1",
+  "description": "Vue application with login form for be included in a single-spa application as registered app.",
+  "main": "dist/single-spa-auth-app.umd.js",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --formats umd --name single-spa-auth-app src/singleSpaEntry.js",
+    "lint": "vue-cli-service lint"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "4.1.0",
+    "@vue/cli-plugin-eslint": "4.1.0",
+    "@vue/cli-service": "4.1.0",
+    "babel-eslint": "10.0.3",
+    "core-js": "3.4.4",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.20.0",
+    "eslint-plugin-vue": "5.0.0",
+    "node-sass": "4.13.1",
+    "sass-loader": "8.0.2",
+    "vue-cli-plugin-single-spa": "1.1.0",
+    "vue-template-compiler": "2.6.11",
+    "webpack": "4.41.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jualoppaz/single-spa-auth-app.git"
+  },
+  "keywords": [
+    "single-spa",
+    "login",
+    "npm",
+    "webpack",
+    "vue",
+    "bootstrap-vue",
+    "bootstrap"
+  ],
+  "author": "Juan Manuel López Pazos",
+  "bugs": {
+    "url": "https://github.com/jualoppaz/single-spa-auth-app/issues"
+  },
+  "homepage": "https://github.com/jualoppaz/single-spa-auth-app#readme"
+}
+```
+
+There are only two scripts in this project:
+
+- **build**: for compile the application and build it as a **libray** in **umd** format
+- **lint**: for run **eslint** in all project
+
+There are only **devDependencies** because the application dependencies are defined as **webpack externals**.
