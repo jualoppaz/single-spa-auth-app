@@ -67,7 +67,7 @@ export const { mount } = vueLifecycles;
 export const { unmount } = vueLifecycles;
 ```
 
-The **eslint** comments are indicated due to **webpack external** dependencies. Without the **eslint** comments the build process will fail.
+The **eslint** comments are indicated due to **webpack external** dependencies. Without the **eslint** comments the build process will fail.\
 The **vueLifecycles** object contains all **single-spa-vue** methods for the **single-spa** lifecycle of this app. All used config is default one but the custom config of the **el** option. It's assumed that an element with **auth-app** id is defined in the **index.html** where this application will be mounted.
 
 ### package.json
@@ -130,3 +130,46 @@ There are only two scripts in this project:
 - **lint**: for run **eslint** in all project
 
 There are only **devDependencies** because the application dependencies are defined as **webpack externals**.
+
+### vue.config.js
+
+```javascript
+const path = require('path');
+const webpack = require('webpack');
+
+module.exports = {
+  devServer: {
+    writeToDisk: true,
+  },
+  configureWebpack: {
+    output: {
+      library: 'single-spa-auth-app',
+      libraryTarget: 'umd',
+      filename: 'single-spa-auth-app.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
+    plugins: [
+      new webpack.optimize.LimitChunkCountPlugin({
+        maxChunks: 1,
+      }),
+    ],
+  },
+  chainWebpack: (config) => {
+    config.externals([
+      '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/free-brands-svg-icons',
+      '@fortawesome/vue-fontawesome',
+      'bootstrap',
+      'bootstrap-vue',
+      'single-spa-vue',
+      'vue',
+      'vue-router',
+      'vue-toastr',
+    ]);
+  },
+};
+```
+
+The needed options for the right build of the application as library are defined in the **configureWebpack.output** field.\
+The **LimitChunkCountPlugin** is used for disable chunks for build process. It's not necessary but I prefer keep whole application in one chunk as it will be embedded in another one.\
+Finally, in the **chainWebpack** field all common dependencies between **single spa** registered apps are defined as **externals**. In that way, all **single spa** registered apps will use the same dependencies and they will be imported only in the root project. 
