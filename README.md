@@ -75,7 +75,7 @@ The **vueLifecycles** object contains all **single-spa-vue** methods for the **s
 ```json
 {
   "name": "single-spa-auth-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Vue application with login form for be included in a single-spa application as registered app.",
   "main": "dist/single-spa-auth-app.umd.js",
   "scripts": {
