@@ -7,20 +7,18 @@
     "build": "vue-cli-service build --target lib --formats umd --name single-spa-auth-app src/singleSpaEntry.js",
     "lint": "vue-cli-service lint"
   },
-  "dependencies": {
-    "core-js": "3.4.4",
-    "node-sass": "4.13.1",
-    "sass-loader": "8.0.2"
-  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "4.1.0",
     "@vue/cli-plugin-eslint": "4.1.0",
     "@vue/cli-service": "4.1.0",
     "babel-eslint": "10.0.3",
+    "core-js": "3.4.4",
     "eslint": "5.16.0",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-plugin-import": "2.20.0",
     "eslint-plugin-vue": "5.0.0",
+    "node-sass": "4.13.1",
+    "sass-loader": "8.0.2",
     "vue-cli-plugin-single-spa": "1.1.0",
     "vue-template-compiler": "2.6.11",
     "webpack": "4.41.5"
