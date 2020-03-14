@@ -18,9 +18,35 @@ This is a vue application built as library which only contains the login form in
 
 There are several files for the right working of this application and they are:
 
+- src/router/index.js
 - src/singleSpaEntry.js
 - package.json
 - vue.config.js
+
+### src/router/index.js
+
+```javascript
+/* eslint-disable import/no-unresolved */
+import Vue from 'vue';
+import Router from 'vue-router';
+
+Vue.use(Router);
+
+export default new Router({
+  mode: 'history',
+  base: '/login',
+  routes: [
+    {
+      path: '/',
+      component: () => import('@/views/Login'),
+      children: [],
+    },
+  ],
+});
+```
+
+The **eslint** comment is indicated due to **webpack external** dependencies. Without the **eslint** comment the build process will fail.\
+As this application will be mounted when browser url starts with **/login** path, we need to config **mode** option with **history** value and **base** option with **base** option with **/login** value in the vue **router** instance.
 
 ### src/singleSpaEntry.js
 
