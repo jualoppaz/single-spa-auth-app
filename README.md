@@ -46,7 +46,7 @@ export default new Router({
 ```
 
 The **eslint** comment is indicated due to **webpack external** dependencies. Without the **eslint** comment the build process will fail.\
-As this application will be mounted when browser url is **/login**, we need to config **mode** option with **history** value and **base** option with **base** option with **/login** value in the vue **router** instance.
+As this application will be mounted when browser url is **/login**, we need to config **mode** option with **history** value and **base** option with **/login** value in the vue **router** instance.
 
 ### src/singleSpaEntry.js
 
