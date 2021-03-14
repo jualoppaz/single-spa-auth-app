@@ -101,7 +101,7 @@ The **vueLifecycles** object contains all **single-spa-vue** methods for the **s
 ```json
 {
   "name": "single-spa-auth-app",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Vue application with login form for be included in a single-spa application as registered app.",
   "main": "dist/single-spa-auth-app.umd.js",
   "scripts": {
@@ -146,7 +146,11 @@ The **vueLifecycles** object contains all **single-spa-vue** methods for the **s
   "bugs": {
     "url": "https://github.com/jualoppaz/single-spa-auth-app/issues"
   },
-  "homepage": "https://github.com/jualoppaz/single-spa-auth-app#readme"
+  "homepage": "https://github.com/jualoppaz/single-spa-auth-app#readme",
+  "dependencies": {
+    "vue-google-adsense": "1.9.2",
+    "vue-script2": "2.1.0"
+  }
 }
 ```
 
