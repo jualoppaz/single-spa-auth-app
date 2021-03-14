@@ -9,6 +9,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+import Ads from 'vue-google-adsense';
+
 import App from './App.vue';
 import router from './router';
 
@@ -23,6 +25,10 @@ Vue.use(VueToastr, {
   defaultPreventDuplicates: true,
   defaultTimeout: 0,
 });
+
+Vue.use(require('vue-script2'));
+
+Vue.use(Ads.AutoAdsense, { adClient: 'ca-pub-2309187828170787' });
 
 Vue.config.productionTip = false;
 
