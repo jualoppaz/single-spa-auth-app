@@ -45,5 +45,9 @@
   "bugs": {
     "url": "https://github.com/jualoppaz/single-spa-auth-app/issues"
   },
-  "homepage": "https://github.com/jualoppaz/single-spa-auth-app#readme"
+  "homepage": "https://github.com/jualoppaz/single-spa-auth-app#readme",
+  "dependencies": {
+    "vue-google-adsense": "1.9.2",
+    "vue-script2": "2.1.0"
+  }
 }
